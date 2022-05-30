@@ -1,0 +1,202 @@
+.image-div{
+    margin-bottom:10px;
+    max-width: 20%;
+    max-height: 30%;
+}
+.banner_content{
+    position: relative;
+    border-radius: 8px;
+    margin-left: 1%;
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    background-color: rgb(57, 73, 94);
+    font-family: 'Sofia';
+}
+.btn{
+    border-radius: 8px;
+    border: 1px solid #97A1A9;
+    text-align:center;
+    width: 90px;
+    height: 30px;
+    color: #FFFFFF;
+    margin-right: 15px;
+    background: #283A46 !important;
+    font-family: Ubuntu;
+    display: flex;justify-content: center;align-items: center;
+}
+.row{
+    display: flex;
+}
+.left_inp{
+    margin-top: 20px;
+    background-color: #283A46;
+    border-color: #356680;
+    border-radius: 5px;
+    padding-left:10px;
+    color: #FFFFFF;
+}
+.right_inp{
+    margin-top: 20px;
+    background-color: #283A46;
+    border-color: #356680;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #FFFFFF;
+}
+.add_left{
+    width:53%;
+    float:left;
+}
+.add_right{
+    width:47%;
+    float:right;
+}
+.left_label{
+    margin-top: 20px;
+    width:150px;
+    color: #97A1A9;
+}
+.right_label{
+    margin-top: 20px;
+    width:100px;
+    color: #97A1A9;
+}
+#left_pag_btn{
+    position: fixed;
+    background: url('image/left.png');
+    top:50%;
+    width:40px;
+    height:40px;
+    left:10px;
+    background-size:cover;
+    border-radius:50%;
+    cursor: pointer;
+}
+#right_pag_btn{
+    position: fixed;
+    top:50%;
+    background: url('image/right.png');
+    padding:7px;
+    background-size:cover;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    right: 10px;
+    cursor: pointer;
+}
+tr:nth-child(even) {background-color: #2A5368;border: none !important;}
+form.example input[type=text] {
+    padding: 10px;
+    border-color: #14AFF1;
+    border-style: solid;
+    color: #FFFFFF;
+    border-right: none;
+    float: left;
+    width: 250px;
+    height: 30px;
+    background: #283A46;
+}
+form.example button {
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    color: #FFFFFF;
+    border-color: #14AFF1;
+    border-style: solid;
+    border-left: none;
+    cursor: pointer;
+    background: #283A46;
+}
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+::placeholder { 
+    color: #FFFFFF;
+    font-family: Ubuntu;
+}
+th,td{
+    border: none !important;
+}
+tbody>tr>:nth-child(2){
+    text-align: center !important;
+}
+tbody>tr>:nth-child(3){
+    text-align: center !important;
+}
+tbody>tr>:nth-child(4){
+    text-align: center !important;
+}
+tbody>tr>:nth-child(5){
+    text-align: center !important;
+}
+tbody>tr>:nth-child(6){
+    text-align: center !important;
+}
+tbody>tr>:nth-child(7){
+    text-align: center !important;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 12%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  border-color: blue !important;
+}
+.modal-content {
+  position: relative;
+  background-color: #2A3E4C;
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: #FFFFFF;
+  border-color: blue !important;
+}
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+.addclose,.editclose,.delclose {
+  color: #97A1A9;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+.addclose:hover,.addclose:focus,.editclose:hover,.editclose:focus,.delclose:hover,.delclose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+  height: 70px;
+}
+.modal-body {
+    padding: 2px 16px;
+    border: 2px solid #283A46;
+}
+.modal-footer {
+  padding: 2px 16px;
+  color: white;
+}
