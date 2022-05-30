@@ -1,0 +1,129 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>| Invoice Management |</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style = "background-color: #58687E !important;font-family: Ubuntu">
+        <div id="banner" style="overflow: hidden; ">
+            <div class="image-div" style="padding-left: 600px">
+                <img src ="image/ABC.png">
+            </div>
+        </div>
+        <h2 style="color: #FFFFFF; padding-left: 13px;">Invoice list</h2>
+        <div class="banner_content">
+            <div class="row" style="float:right; display: flex;">
+                <a><button class ="button btn" style="border-color: #14AFF1;" id="addBtn"><img src ="images/Path 18189.svg" style="padding-top: 3px;">&nbsp;&nbsp;&nbsp;&nbsp;Add</button></a>
+                <a><button class ="button btn" id="editBtn"><img src ="images/Path 18191.svg">&nbsp;&nbsp;&nbsp;Edit</button></a>
+                <a><button class ="button btn" id="delBtn"><img src ="images/Path 18189-1.svg" style="padding-bottom: 3px;">&nbsp;&nbsp;&nbsp;Delete</button></a>
+              <form class="example">
+                    <input type="text" id="searchtext" placeholder="Search by Invoice Number">
+                    <button type="submit" id="searchButton" style="display: flex;justify-content: center;align-items: center;">&#128270;</button>
+            </form>
+            </div>
+            <br>
+            <div style="padding-top: 30px;">
+                <table style="width:100%; height: 500px !important;font-family: Ubuntu">
+                    <thead style="color: #97A1A9; font-size: 15px ">
+                        <tr>
+                            <th><input type="checkbox" style="margin-left: 2px; margin-bottom:6px; border-color: #97A1A9; background-color: #97A1A9;"></th> 
+                            <th>Customer Number</th>
+                            <th>Customer #</th>
+                            <th>Invoice #</th>
+                            <th>Invoice Amount</th>
+                            <th>Due Date</th>
+                            <th>Predicted Payment Date</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="t_body" style="color: #FFFFFF;height: 20% !important;">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button id="left_pag_btn"></button>
+        <button id="right_pag_btn"></button>
+        <div id="addModal" class="modal">
+            <div class="modal-content" style="width: 50%;">
+                <div class="modal-header">
+                    <span class="addclose">&times;</span>
+                    <h3 style="padding-top:7px; padding-left: 10px">Add invoice</h3>
+                </div>
+                <div class="modal-body" style="height: 25%">
+                    <form  action="">
+                        <div class="add_left">
+                            <div style="display:flex;">
+                                <label class="left_label">Customer Name* </label><input type="text" class="left_inp" id="cust_name" required>
+                            </div>
+                            <div style="display:flex;">
+                                <label class="left_label">Customer No.* </label><input type="text" class="left_inp" id="cust_num" required>
+                            </div>
+                            <div style="display:flex;">
+                                <label class="left_label">Invoice No.* </label><input type="text" class="left_inp" id="invoice_num" required>
+                            </div>
+                            <div style="display:flex;">
+                                <label class="left_label">Invoice Amount* </label><input type="text" class="left_inp" id="invoice_amt" required>
+                            </div>
+                        </div>
+                        <div class="add_right">
+                            <div style="display:flex;">
+                                <label class="right_label">Due Date* </label><input type="date" class="right_inp" id="due" required>
+                            </div>
+                            <div style="display:flex;">
+                                <label class="right_label">Notes </label><textarea class="right_inp" cols="18" rows="7" id="note"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="height: 60px; display: flex;">
+                    <a style="float: left; color: #14AFF1; padding-left: 20px; padding-top:18px;" href="">Cancel</a>
+                    <button class ="button btn" style="border-color: #14AFF1; width:100px; margin-left: 500px; margin-top:13px;">Clear</button>
+                    <button class ="button btn" style="border-color: #14AFF1; width:100px; margin-top:13px;" id="addsub">Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="editModal" class="modal">
+            <div class="modal-content" style="width: 25%;">
+                <div class="modal-header">
+                    <span class="editclose">&times;</span>
+                    <h3 style="padding-top:7px; padding-left: 10px">Edit invoice</h3>
+                </div>
+                <div class="modal-body" style="height: 25%">
+                    <form  action="">
+                        <div style="display:flex;">
+                            <label class="right_label" style="width:130px;">Invoice Amount</label>&nbsp;<input type="text" class="right_inp" required>
+                        </div>
+                        <div style="display:flex;">
+                            <label class="right_label" style="width:130px;">Notes </label>&nbsp;<input type="text" class="right_inp" style="height:115px">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="height: 60px; display: flex;">
+                    <a style="float: left; color: #14AFF1; padding-left: 20px; padding-top:18px;" href="">Cancel</a>
+                    <button class ="button btn" style="border-color: #14AFF1; width:120px; margin-left: 120px; margin-top:13px;">Reset</button>
+                    <button class ="button btn" style="border-color: #14AFF1; width:120px; margin-top:13px;">Save</button>
+                </div>
+            </div>
+        </div>
+        <div id="delModal" class="modal">
+            <div class="modal-content" style="width: 35%;">
+                <div class="modal-header">
+                    <span class="delclose">&times;</span>
+                    <h3 style="padding-top:7px; padding-left: 10px">Delete Record(s)?</h3>
+                </div>
+                <div class="modal-body" style="height: 15%; color: #C0C6CA;">
+                    <p>You'll lose your record(s) after this action. We can't recover them once you delete. We can't recover them once you delete.</p>
+                    <p>Are you sure you want to<span style="color: red;"> permenantly delete</span> them?</p>
+                </div>
+                <div class="modal-footer" style="height: 60px; display: flex;">
+                    <button class ="button btn" style="border-color: #14AFF1; width:80px; margin-left: 300px; margin-top:13px;">Cancel</button>
+                    <button class ="button btn" style="border-color: #14AFF1; width:80px; margin-top:13px;">Delete</button>
+                </div>
+            </div>
+        </div>
+        <script src="Javascript/script.js">
+            </script>
+    </body>
+</html>
